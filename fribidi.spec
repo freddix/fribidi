@@ -1,11 +1,11 @@
 Summary:	Library implementing the Unicode BiDi algorithm
 Name:		fribidi
-Version:	0.19.5
+Version:	0.19.6
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://fribidi.org/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	925bafb97afee8a2fc2d0470c072a155
+# Source0-md5:	ce93d862344991173dabb609bf93ca1d
 URL:		http://fribidi.org/
 BuildRequires:	autoconf
 BuildRequires:	automake

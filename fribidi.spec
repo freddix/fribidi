@@ -1,7 +1,7 @@
 Summary:	Library implementing the Unicode BiDi algorithm
 Name:		fribidi
 Version:	0.19.6
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://fribidi.org/download/%{name}-%{version}.tar.bz2
@@ -35,6 +35,7 @@ rm -f acinclude.m4
 %{__autoconf}
 %{__automake}
 %configure \
+	--disable-silent-rules	\
 	--disable-static
 %{__make}
 
@@ -43,6 +44,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
